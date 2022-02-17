@@ -71,12 +71,13 @@ footer a:visited{
 /*****  End Starter Code ****/
 
 /* Requirement 1 code here*/
-nav li a:link{
+
+nav li a:link {
   text-decoration: none;
 }
 
 /* Requirement 2 code here*/
-nav li a:hover{
+nav li a:hover {
   text-decoration: black wavy underline;
 }
 
@@ -100,36 +101,74 @@ nav li a:focus {
 .container{
   /* Requirement 5 code here*/
   display: grid;
+  /*margin: 0 auto;*/
   grid-template-columns: 1fr 5fr 1fr;
-  /*grid-template-rows: auto; */
   row-gap: 30px;
-
 }
 
 /* Requirements 6-10 here: */
 .intro {
-  background-image: url("images/header.jpg") #DDDDDD;
+  /* The image used */
+  background-image: url("/HW3-2022-main/images/header.jpg");
+  background-color: #DDDDDD, #858585, #707070,#B3B3B3;
+  
+  /* Set a specific height */
   min-height: 400px;
-
+  
+  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#about, 
-#clients, 
-#method, 
-#contant {
-  grid-column-start: 1;
+.about, 
+.clients,
+.method,
+.contact {
+  grid-column: 2 / span 1;
 }
 
+img {
+  width: 100%;
+}
+
+.about-image,
+.clients-image,
+.method-image,
+.contact-image {
+  grid-column: 1 / span 3;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.about, .about-image {
+  grid-row: 1 / span 1;
+}
+
+.clients, .clients-image {
+  grid-row: 2 / span 1;
+}
+
+.method, .method-image {
+  grid-row: 3 / span 1;
+}
+
+.contact, .contact-image {
+  grid-row: 4 / span 1;
+}
+
+.text {
+  justify-self: center;
+  align-self: center;
+  max-height: 25vh;
+  overflow: scroll;
+}
 
 @media screen and (min-width: 700px){
-  nav{
+  nav {
     padding-top: 35px;
-    /*Requirement 11*/
-
+    text-align: right;
   }
 
   nav li{
@@ -140,6 +179,30 @@ nav li a:focus {
   
   /* Requirements 12-15 here: */
 
+  a.skip {
+    text-align: left;
+    top: 20px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 300px 300px 300px 300px;
+  }
+
+  .about, 
+  .method, 
+  .clients-image, 
+  .contact-image {
+    grid-column: 3 / span 2;
+  }
+
+  .clients, 
+  .contact, 
+  .about-image, 
+  .method-image {
+    grid-column: 2 / span 2;
+  }
 }
 
 

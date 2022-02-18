@@ -89,7 +89,8 @@ a.skip{
   z-index: 1;
   /* Requirement 3 code here*/
   position: absolute;
-  left: -500px;
+  left: 500px;
+  visibility: hidden;
 }
 
 
@@ -109,8 +110,8 @@ nav li a:focus {
 /* Requirements 6-10 here: */
 .intro {
   /* The image used */
+  background-color: #B3B3B3;
   background-image: url("/HW3-2022-main/images/header.jpg");
-  background-color: #DDDDDD, #858585, #707070,#B3B3B3;
   
   /* Set a specific height */
   min-height: 400px;

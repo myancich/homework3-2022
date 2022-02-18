@@ -81,15 +81,15 @@ nav li a:hover {
   text-decoration: black wavy underline;
 }
 
-a.skip{
+a.skip {
   background: white;
   padding: 6px;
   -webkit-transition: top 1s ease-out;
   transition: left 1s ease-out;
   z-index: 1;
-  /* Requirement 3 code here*/
+  /* Requirement 3 code here*/ 
   position: absolute;
-  left: 500px;
+  left: -500px;
   visibility: hidden;
 }
 
@@ -111,6 +111,8 @@ nav li a:focus {
 .intro {
   /* The image used */
   background-color: #B3B3B3;
+  background-color: #DDDDDD;
+  background-color: ;
   background-image: url("/HW3-2022-main/images/header.jpg");
   
   /* Set a specific height */
